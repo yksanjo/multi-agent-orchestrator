@@ -1,8 +1,11 @@
 # Multi-Agent Orchestration Spec Language
 
-![License](https://img.shields.io/github/license/ai-engineer-community/multi-agent-orchestrator)
+![License](https://img.shields.io/github/license/yksanjo/multi-agent-orchestrator)
+![GitHub stars](https://img.shields.io/github/stars/yksanjo/multi-agent-orchestrator?style=social)
+![GitHub issues](https://img.shields.io/github/issues/yksanjo/multi-agent-orchestrator)
 ![TypeScript](https://img.shields.io/badge/Made%20with-TypeScript-blue)
 ![YAML](https://img.shields.io/badge/DSL-YAML-blue)
+![Maintenance](https://img.shields.io/badge/Maintained%3F-yes-green.svg)
 
 YAML-based DSL + executor for defining agent roles, tools, dependencies, automatic resource allocation, and built-in error recovery with circuit breakers. Compatible with Anthropic SDK, OpenAI, Groq.
 
