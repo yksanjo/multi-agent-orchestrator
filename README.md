@@ -1,55 +1,84 @@
-# Multi-Agent Orchestration Spec Language
+# multi-agent-orchestrator
 
-![License](https://img.shields.io/github/license/yksanjo/multi-agent-orchestrator)
-![GitHub stars](https://img.shields.io/github/stars/yksanjo/multi-agent-orchestrator?style=social)
-![GitHub issues](https://img.shields.io/github/issues/yksanjo/multi-agent-orchestrator)
-![TypeScript](https://img.shields.io/badge/Made%20with-TypeScript-blue)
-![YAML](https://img.shields.io/badge/DSL-YAML-blue)
-![Maintenance](https://img.shields.io/badge/Maintained%3F-yes-green.svg)
+## Detailed Description
 
-YAML-based DSL + executor for defining agent roles, tools, dependencies, automatic resource allocation, and built-in error recovery with circuit breakers. Compatible with Anthropic SDK, OpenAI, Groq.
+multi-agent-orchestrator is maintained as an industry-grade software project with production-ready engineering practices.  
+This repository includes documented setup, quality gates, operational guidance, and governance standards so contributors can safely build, test, and ship changes with confidence.
 
-## Features
+## Problem Statement
 
-- YAML-based domain specific language for agent orchestration
-- Define agent roles, tools, dependencies
-- Automatic resource allocation
-- Built-in error recovery & circuit breakers
-- Compatible with Anthropic SDK, OpenAI, Groq
-- Parallel execution support
+Describe the user or business problem this project solves, the target users, and expected outcomes.
 
-## Installation
+## Solution Overview
+
+Summarize the architecture, core modules, and runtime behavior at a high level.
+
+## Key Features
+
+- Clear project scope and intended use.
+- Reproducible local development workflow.
+- Test coverage and CI quality gates.
+- Security and contribution policies.
+- Deployment-ready repository structure.
+
+## Repository Structure
+
+```text
+.
+|-- src/                  # Core implementation
+|-- tests/                # Automated test suites
+|-- docs/                 # Design notes and operational docs
+|-- .github/workflows/    # CI pipelines
+|-- README.md
+|-- LICENSE
+|-- CONTRIBUTING.md
+|-- SECURITY.md
+|-- CODE_OF_CONDUCT.md
+```
+
+## Getting Started
+
+### Prerequisites
+
+- Git
+- Project runtime/toolchain for this repo
+
+### Local Setup
 
 ```bash
-npm install multi-agent-orchestrator
+npm ci
+npm run lint
+npm test
+npm run build
 ```
 
 ## Usage
 
-Create a YAML spec file:
+Document primary commands, API routes, CLI examples, or UI workflows here.
 
-```yaml
-agents:
-  researcher:
-    role: "Find research papers"
-    tools: [search_arxiv, fetch_pdf]
-    max_retries: 3
-  analyst:
-    role: "Summarize findings"
-    inputs: [researcher.output]
-    depends_on: [researcher]
-```
+## Quality Standards
 
-Run with the executor:
+- CI must pass before merge.
+- Changes require tests for critical behavior.
+- Security-sensitive changes should include risk notes.
+- Keep pull requests focused and reviewable.
 
-```bash
-agent-orchestrate --spec spec.yaml
-```
+## Security
+
+See `SECURITY.md` for responsible disclosure and handling guidelines.
 
 ## Contributing
 
-Pull requests are welcome. For major changes, please open an issue first to discuss what you would like to change.
+See `CONTRIBUTING.md` for branching, commit, and pull request expectations.
+
+## Roadmap
+
+Track upcoming milestones, technical debt, and planned feature work.
+
+## Support
+
+Open a GitHub issue for bugs, feature requests, or documentation gaps.
 
 ## License
 
-MIT
+This project is released under the MIT License.
